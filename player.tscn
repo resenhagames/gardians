@@ -506,7 +506,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6w8y"]
-size = Vector2(52.5, 80.75)
+size = Vector2(37.5, 69)
 
 [node name="Player" type="CharacterBody2D" unique_id=973547373]
 script = ExtResource("1_i3pqv")
@@ -523,10 +523,10 @@ sprite_frames = SubResource("SpriteFrames_xry5e")
 animation = &"jump"
 frame_progress = 0.47535357
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1109885272]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1109885272 groups=["player"]]
 position_smoothing_enabled = true
-position_smoothing_speed = 17.0
+position_smoothing_speed = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=339774241]
-position = Vector2(80, -67)
+position = Vector2(63.25, -66.5)
 shape = SubResource("RectangleShape2D_h6w8y")
