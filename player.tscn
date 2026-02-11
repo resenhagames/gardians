@@ -3,10 +3,56 @@
 [ext_resource type="Script" uid="uid://cbhtj8uhrjqmd" path="res://Player.cs" id="1_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://d5h4ukot2nvb" path="res://pxArt.png" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://bhwom8wexinr6" path="res://pxArt(1).png" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://6vs11ik440uu" path="res://Captura de tela de 2026-02-08 12-01-33.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://b4h3qrbsjodyo" path="res://pxArt(2).png" id="3_hqtel"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
 atlas = ExtResource("1_onrkg")
 region = Rect2(768, 2240, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xry5e"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(1536, 0, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6w8y"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(2304, 0, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yem3p"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(0, 448, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86rna"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(768, 448, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg1a7"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(1536, 448, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ob4mi"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(2304, 448, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ax26h"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(768, 896, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh4g0"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(1536, 896, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgmjd"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(2304, 896, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_va2xi"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(0, 1344, 768, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkf2u"]
+atlas = ExtResource("3_hqtel")
+region = Rect2(768, 1344, 768, 448)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
 atlas = ExtResource("2_i3pqv")
@@ -244,6 +290,44 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_xry5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6w8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yem3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86rna")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg1a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ob4mi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ax26h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh4g0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgmjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_va2xi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkf2u")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_sweqy")
 }, {
 "duration": 1.0,
@@ -427,14 +511,21 @@ size = Vector2(52.5, 80.75)
 [node name="Player" type="CharacterBody2D" unique_id=973547373]
 script = ExtResource("1_i3pqv")
 
+[node name="CapturaDeTelaDe20260208120133" type="Sprite2D" parent="." unique_id=974467168]
+position = Vector2(24.499989, 6.9999924)
+scale = Vector2(1.4053226, 1.6540085)
+texture = ExtResource("2_sweqy")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=240851361]
-position = Vector2(82.000015, -77.25001)
-scale = Vector2(0.42187503, 0.2890625)
+position = Vector2(82, -77.25001)
+scale = Vector2(0.4218751, 0.2890625)
 sprite_frames = SubResource("SpriteFrames_xry5e")
-animation = &"idle"
-frame_progress = 0.60453385
+animation = &"jump"
+frame_progress = 0.47535357
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1109885272]
+position_smoothing_enabled = true
+position_smoothing_speed = 17.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=339774241]
 position = Vector2(80, -67)
