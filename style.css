@@ -12,11 +12,22 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #e0e8f0;
     background-color: #0a0f1a;
     line-height: 1.7;
     overflow-x: hidden;
+}
+
+.logo-text {
+    color: var(--roxo-logo, #8e6db5);
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+
+.material-digital {
+    color: var(--roxo-material, #5b289e);
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: bold;
 }
 
 a {
@@ -63,10 +74,10 @@ img {
     height: 64px;
 }
 
-.nav-logo {
+ .nav-logo {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #5db8d4;
+    color: var(--azul1-logo, #91a4ce);
     letter-spacing: 0.5px;
 }
 
@@ -82,18 +93,18 @@ img {
     position: relative;
 }
 
-.nav-links a:hover {
-    color: #5db8d4;
+ .nav-links a:hover {
+    color: var(--azul2-logo, #91b0d4);
 }
 
-.nav-links a::after {
+ .nav-links a::after {
     content: '';
     position: absolute;
     bottom: -4px;
     left: 0;
     width: 0;
     height: 2px;
-    background: #5db8d4;
+    background: var(--azul3-logo, #92bedb);
     transition: width 0.3s;
 }
 
