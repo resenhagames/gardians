@@ -324,7 +324,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jump",
-"speed": 20.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -509,6 +509,7 @@ animations = [{
 size = Vector2(37.5, 69)
 
 [node name="Player" type="CharacterBody2D" unique_id=973547373]
+collision_layer = 2
 script = ExtResource("1_i3pqv")
 
 [node name="CapturaDeTelaDe20260208120133" type="Sprite2D" parent="." unique_id=974467168]
@@ -521,11 +522,11 @@ position = Vector2(82, -77.25001)
 scale = Vector2(0.4218751, 0.2890625)
 sprite_frames = SubResource("SpriteFrames_xry5e")
 animation = &"jump"
-frame_progress = 0.47535357
+frame_progress = 0.34268093
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1109885272 groups=["player"]]
 position_smoothing_enabled = true
-position_smoothing_speed = 10.0
+position_smoothing_speed = 18.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=339774241]
 position = Vector2(63.25, -66.5)

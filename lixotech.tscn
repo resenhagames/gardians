@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dnygkwhcc6d3r"]
+
+[ext_resource type="Texture2D" uid="uid://bnaeltusnffd" path="res://lixotech-removebg-preview.png" id="1_ecrru"]
+[ext_resource type="Script" uid="uid://dp0bqjje5dvwy" path="res://Lixotech.cs" id="1_oun0p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oun0p"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oun0p"]
+atlas = ExtResource("1_ecrru")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvoen"]
+atlas = ExtResource("1_ecrru")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fvoen"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oun0p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvoen")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oun0p"]
+radius = 79.0
+
+[node name="lixotech" type="CharacterBody2D" unique_id=1548614849]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_oun0p")
+
+[node name="enemy coliiision" type="CollisionShape2D" parent="." unique_id=324893249]
+y_sort_enabled = true
+position = Vector2(109, -27)
+shape = SubResource("CapsuleShape2D_oun0p")
+debug_color = Color(0, 0.6725113, 0.9533536, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy coliiision" unique_id=221927929]
+position = Vector2(3, -6)
+scale = Vector2(0.13749999, 0.13149999)
+sprite_frames = SubResource("SpriteFrames_fvoen")
+animation = &"idle"
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1670809853]
+collision_layer = 0
+collision_mask = 2
+
+[node name="visaao colisao" type="CollisionShape2D" parent="DetectionArea" unique_id=1149918728]
+position = Vector2(109, -26)
+shape = SubResource("CircleShape2D_oun0p")
+debug_color = Color(0.9999923, 0.12514043, 0.40423906, 0.41960785)
