@@ -4,11 +4,24 @@
 [ext_resource type="Texture2D" uid="uid://d5h4ukot2nvb" path="res://pxArt.png" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://bhwom8wexinr6" path="res://pxArt(1).png" id="2_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://6vs11ik440uu" path="res://Captura de tela de 2026-02-08 12-01-33.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://q4tupo08bivb" path="res://SEILAIDLE.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://b4h3qrbsjodyo" path="res://pxArt(2).png" id="3_hqtel"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
-atlas = ExtResource("1_onrkg")
-region = Rect2(768, 2240, 768, 448)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7jk6"]
+atlas = ExtResource("3_2hs0m")
+region = Rect2(0, 0, 768, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feeoa"]
+atlas = ExtResource("3_2hs0m")
+region = Rect2(768, 0, 768, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m6nxt"]
+atlas = ExtResource("3_2hs0m")
+region = Rect2(1536, 0, 768, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ym00c"]
+atlas = ExtResource("3_2hs0m")
+region = Rect2(2304, 0, 768, 384)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xry5e"]
 atlas = ExtResource("3_hqtel")
@@ -282,11 +295,20 @@ region = Rect2(2304, 2688, 768, 448)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hqtel")
+"texture": SubResource("AtlasTexture_s7jk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feeoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m6nxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ym00c")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 11.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -521,8 +543,8 @@ texture = ExtResource("2_sweqy")
 position = Vector2(82, -77.25001)
 scale = Vector2(0.4218751, 0.2890625)
 sprite_frames = SubResource("SpriteFrames_xry5e")
-animation = &"jump"
-frame_progress = 0.34268093
+animation = &"idle"
+frame_progress = 0.33115748
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1109885272 groups=["player"]]
 position_smoothing_enabled = true

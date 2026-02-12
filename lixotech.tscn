@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bnaeltusnffd" path="res://lixotech-removebg-preview.png" id="1_ecrru"]
 [ext_resource type="Script" uid="uid://dp0bqjje5dvwy" path="res://Lixotech.cs" id="1_oun0p"]
+[ext_resource type="Texture2D" uid="uid://xkj3tphoej5s" path="res://lixotech-walk.png" id="3_fvoen"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oun0p"]
 radius = 16.0
@@ -14,6 +15,14 @@ region = Rect2(0, 0, 500, 500)
 [sub_resource type="AtlasTexture" id="AtlasTexture_fvoen"]
 atlas = ExtResource("1_ecrru")
 region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6pbd"]
+atlas = ExtResource("3_fvoen")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w864b"]
+atlas = ExtResource("3_fvoen")
+region = Rect2(1000, 0, 500, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fvoen"]
 animations = [{
@@ -28,10 +37,16 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fvoen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6pbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w864b")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 5.0
+"speed": 4.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oun0p"]
@@ -43,22 +58,28 @@ collision_mask = 3
 script = ExtResource("1_oun0p")
 
 [node name="enemy coliiision" type="CollisionShape2D" parent="." unique_id=324893249]
+light_mask = 4
+visibility_layer = 3
 y_sort_enabled = true
 position = Vector2(109, -27)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("CapsuleShape2D_oun0p")
 debug_color = Color(0, 0.6725113, 0.9533536, 0.41960785)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemy coliiision" unique_id=221927929]
-position = Vector2(3, -6)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=221927929]
+position = Vector2(112, -33)
 scale = Vector2(0.13749999, 0.13149999)
 sprite_frames = SubResource("SpriteFrames_fvoen")
-animation = &"idle"
+animation = &"walk"
+frame_progress = 0.7503698
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1670809853]
 collision_layer = 0
 collision_mask = 2
 
 [node name="visaao colisao" type="CollisionShape2D" parent="DetectionArea" unique_id=1149918728]
+light_mask = 0
+visibility_layer = 2
 position = Vector2(109, -26)
 shape = SubResource("CircleShape2D_oun0p")
 debug_color = Color(0.9999923, 0.12514043, 0.40423906, 0.41960785)
