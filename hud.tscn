@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bdgtycan4htb5"]
+
+[ext_resource type="Texture2D" uid="uid://dj55a8dwgo3rt" path="res://HUD1h (1).png" id="1_8sq4i"]
+[ext_resource type="Script" uid="uid://bm3icjym0q40u" path="res://Hud.cs" id="1_640wx"]
+
+[sub_resource type="FontVariation" id="FontVariation_a2258"]
+
+[node name="hud" type="Control" unique_id=2050013159]
+layout_mode = 3
+anchor_right = 0.5
+anchor_bottom = 0.37800002
+offset_right = -576.0
+offset_bottom = -244.94402
+script = ExtResource("1_640wx")
+
+[node name="BottlesLabel" type="Label" parent="." unique_id=1563589832]
+layout_mode = 0
+offset_top = 26.0
+offset_right = 190.0
+offset_bottom = 71.0
+theme_override_colors/font_outline_color = Color(0, 0.14120576, 0.99998695, 1)
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("FontVariation_a2258")
+theme_override_font_sizes/font_size = 32
+text = "Garrafas: 0"
+text_overrun_behavior = 1
+
+[node name="livecontanier" type="HBoxContainer" parent="." unique_id=1741647465]
+layout_mode = 0
+offset_left = 2.000002
+offset_top = -1.000001
+offset_right = 600.0
+offset_bottom = 115.0
+scale = Vector2(0.30223602, 0.33238223)
+
+[node name="heat 1" type="TextureRect" parent="livecontanier" unique_id=1673921850]
+layout_mode = 2
+texture = ExtResource("1_8sq4i")
+expand_mode = 3
+
+[node name="heart 2" type="TextureRect" parent="livecontanier" unique_id=1250430967]
+layout_mode = 2
+texture = ExtResource("1_8sq4i")
+
+[node name="heart 3" type="TextureRect" parent="livecontanier" unique_id=1597575640]
+layout_mode = 2
+texture = ExtResource("1_8sq4i")
+expand_mode = 3
+stretch_mode = 2
