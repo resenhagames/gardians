@@ -50,7 +50,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oun0p"]
-radius = 79.0
+radius = 22.022715
 
 [node name="lixotech" type="CharacterBody2D" unique_id=1548614849]
 collision_layer = 4
@@ -67,8 +67,8 @@ shape = SubResource("CapsuleShape2D_oun0p")
 debug_color = Color(0, 0.6725113, 0.9533536, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=221927929]
-position = Vector2(112, -33)
-scale = Vector2(0.13749999, 0.13149999)
+position = Vector2(109.00001, -29.999998)
+scale = Vector2(0.07799999, 0.073874995)
 sprite_frames = SubResource("SpriteFrames_fvoen")
 animation = &"walk"
 frame_progress = 0.7503698
@@ -80,6 +80,6 @@ collision_mask = 2
 [node name="visaao colisao" type="CollisionShape2D" parent="DetectionArea" unique_id=1149918728]
 light_mask = 0
 visibility_layer = 2
-position = Vector2(109, -26)
+position = Vector2(109, -29)
 shape = SubResource("CircleShape2D_oun0p")
 debug_color = Color(0.9999923, 0.12514043, 0.40423906, 0.41960785)

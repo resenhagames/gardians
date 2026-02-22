@@ -15,6 +15,11 @@ run/main_scene="uid://bnwob8xj164l7"
 config/features=PackedStringArray("4.6", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1020
+window/size/viewport_height=720
+
 [dotnet]
 
 project/assembly_name="gardians-jam"
