@@ -528,20 +528,20 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6w8y"]
-size = Vector2(37.5, 69)
+size = Vector2(22, 34)
 
 [node name="Player" type="CharacterBody2D" unique_id=973547373]
 collision_layer = 2
 script = ExtResource("1_i3pqv")
 
 [node name="CapturaDeTelaDe20260208120133" type="Sprite2D" parent="." unique_id=974467168]
-position = Vector2(24.499989, 6.9999924)
+position = Vector2(25, 4)
 scale = Vector2(1.4053226, 1.6540085)
 texture = ExtResource("2_sweqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=240851361]
-position = Vector2(82, -77.25001)
-scale = Vector2(0.4218751, 0.2890625)
+position = Vector2(78, -54.5)
+scale = Vector2(0.19270833, 0.12760417)
 sprite_frames = SubResource("SpriteFrames_xry5e")
 animation = &"idle"
 frame_progress = 0.33115748
@@ -551,5 +551,5 @@ position_smoothing_enabled = true
 position_smoothing_speed = 18.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=339774241]
-position = Vector2(63.25, -66.5)
+position = Vector2(76, -49)
 shape = SubResource("RectangleShape2D_h6w8y")
