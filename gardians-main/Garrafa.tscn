@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://2b8c4bwhwg0x"]
+
+[ext_resource type="Script" uid="uid://b2baqc7h2p4kn" path="res://Garrafa.cs" id="1_n8v1g"]
+[ext_resource type="Texture2D" uid="uid://dtl2j3skc0c5w" path="res://Sprite-0004.png" id="2_8ml1v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yje7w"]
+size = Vector2(11, 23)
+
+[node name="Garrafa" type="Area2D" unique_id=37377646]
+script = ExtResource("1_n8v1g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1573959206]
+position = Vector2(537, 372.54294)
+scale = Vector2(0.06749998, 0.06795244)
+texture = ExtResource("2_8ml1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2022384949]
+position = Vector2(539.5, 377.5)
+shape = SubResource("RectangleShape2D_yje7w")
