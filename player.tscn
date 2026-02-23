@@ -148,8 +148,8 @@ collision_layer = 2
 script = ExtResource("1_i3pqv")
 
 [node name="CapturaDeTelaDe20260208120133" type="Sprite2D" parent="." unique_id=974467168]
-position = Vector2(25, -2.9999995)
-scale = Vector2(1.4053226, 1.6540085)
+position = Vector2(-0.99999905, 23)
+scale = Vector2(0.6990788, 0.5337552)
 texture = ExtResource("2_sweqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=240851361]
@@ -161,7 +161,9 @@ frame = 2
 frame_progress = 0.33601695
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1109885272 groups=["player"]]
-position_smoothing_enabled = true
+ignore_rotation = false
+zoom = Vector2(1.5, 1.5)
+limit_enabled = false
 position_smoothing_speed = 18.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=339774241]
