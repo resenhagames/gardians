@@ -1,51 +1,63 @@
-// Menu mobile
-document.addEventListener('DOMContentLoaded', function () {
-    var toggle = document.querySelector('.nav-toggle');
-    var links = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+    // Nav shrink on scroll
+    const gameNav = document.getElementById('gameNav');
 
-    if (toggle && links) {
-        toggle.addEventListener('click', function () {
-            links.classList.toggle('ativo');
-        });
-
-        // Fechar menu ao clicar em um link
-        var itens = links.querySelectorAll('a');
-        itens.forEach(function (item) {
-            item.addEventListener('click', function () {
-                links.classList.remove('ativo');
-            });
-        });
-    }
-
-    // Animação de entrada ao rolar
-    var elementos = document.querySelectorAll(
-        '.sobre-grid, .mecanica-item, .galeria-item, .timeline-item, .membro-card, .equipe-info'
-    );
-
-    elementos.forEach(function (el) {
-        el.classList.add('fade-in');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            gameNav.style.backgroundColor = 'rgba(20, 20, 20, 0.95)';
+            gameNav.style.backdropFilter = 'blur(10px)';
+            gameNav.style.padding = '0 0'; // Optional: shrink effect
+        } else {
+            gameNav.style.backgroundColor = 'var(--game-nav-bg)';
+            gameNav.style.backdropFilter = 'none';
+        }
     });
 
-    function verificarVisibilidade() {
-        elementos.forEach(function (el) {
-            var rect = el.getBoundingClientRect();
-            var visivel = rect.top < window.innerHeight - 80;
-            if (visivel) {
-                el.classList.add('visivel');
+    // Smooth scroll for nav links
+    document.querySelectorAll('.game-links a, .game-actions a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const currentHref = this.getAttribute('href');
+
+            // Allow default behavior for external/login links
+            if (currentHref === '#' || currentHref.startsWith('http')) return;
+
+            e.preventDefault();
+            const targetId = currentHref.substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                // Adjusting for the fixed nav height (60px)
+                const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 60;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
-    }
+    });
 
-    verificarVisibilidade();
-    window.addEventListener('scroll', verificarVisibilidade);
+    // Scroll Reveal Animation (Intersection Observer)
+    const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right');
 
-    // Header com fundo ao rolar
-    var header = document.querySelector('.header');
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 50) {
-            header.style.borderBottomColor = 'rgba(93, 184, 212, 0.15)';
-        } else {
-            header.style.borderBottomColor = 'rgba(93, 184, 212, 0.1)';
-        }
+    const revealCallback = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-revealed');
+                // Optional: stop observing once revealed
+                // observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const revealOptions = {
+        root: null,
+        rootMargin: '0px 0px -100px 0px', // Trigger slightly before it hits the bottom
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(revealCallback, revealOptions);
+
+    revealElements.forEach(el => {
+        observer.observe(el);
     });
 });
