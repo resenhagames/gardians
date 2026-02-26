@@ -204,7 +204,21 @@ img {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: #1a1a1a;
+    background-color: #050810;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.35) saturate(1.1);
 }
 
 .hero-bg {
@@ -213,10 +227,8 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 70% 50%, rgba(142, 109, 181, 0.15) 0%, rgba(15, 20, 30, 0.9) 70%), url('pxArt(2).png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8;
+    background: radial-gradient(circle at 70% 50%, rgba(142, 109, 181, 0.1) 0%, rgba(5, 8, 16, 0.6) 70%);
+    z-index: 1;
 }
 
 .hero-container {
@@ -241,13 +253,17 @@ img {
 }
 
 .hero-title {
-    font-family: 'Glacial Indifference', sans-serif;
-    font-size: 5rem;
-    font-weight: 800;
-    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 0.9;
     margin-bottom: 20px;
     text-transform: uppercase;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, #ffffff 0%, #cba358 50%, #8e6db5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
 .hero-divider {
@@ -397,10 +413,10 @@ img {
 }
 
 .highlight-box {
-    background: rgba(142, 109, 181, 0.1);
+    background: rgba(142, 109, 181, 0.05);
     border-left: 4px solid var(--brand-primary);
     padding: 30px;
-    border-radius: 0 8px 8px 0;
+    border-radius: 4px;
     margin-top: 30px;
 }
 
@@ -437,6 +453,43 @@ img {
     gap: 30px;
     margin-top: 60px;
 }
+
+.concept-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.concept-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s;
+}
+
+.concept-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.concept-card h3 {
+    color: #fff;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.concept-card p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 
 .mechanic-card {
     background: rgba(255, 255, 255, 0.02);
@@ -510,21 +563,21 @@ img {
 
 .btn-instagram {
     display: inline-block;
-    background: linear-gradient(135deg, #1a7a9e, #2a8a6e);
-    color: white;
-    text-decoration: none;
-    padding: 16px 32px;
-    border-radius: 30px;
+    padding: 16px 36px;
+    border-radius: 4px;
     font-weight: 700;
-    font-size: 1.1rem;
-    box-shadow: 0 10px 20px rgba(26, 122, 158, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
 }
 
 .btn-instagram:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(26, 122, 158, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Equipe */
 .team-section {

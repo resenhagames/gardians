@@ -48,8 +48,12 @@
 
         <!-- SLIDE 1: TÍTULO -->
         <section class="hero-section" id="inicio">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/video/hero-bg.mp4" type="video/mp4">
+            </video>
             <div class="hero-bg"></div>
             <div class="hero-container">
+
                 <div class="hero-text-area animate-fade-in">
                     <h2 class="hero-pretitle">APRESENTAÇÃO FASE 2 - 25 DE FEVEREIRO DE 2026</h2>
                     <h1 class="hero-title">GUARDIÃ<br>YACEU</h1>
@@ -80,26 +84,23 @@
         <section class="content-section light-section" id="conceito">
             <div class="container text-center reveal-up">
                 <h3 class="section-subtitle">Visão Geral</h3>
-                <h2 class="section-title text-dark">High Concept</h2>
+                <h2 class="section-title">High Concept</h2>
 
                 <p class="slide-phrase">
                     "Purifique as nascentes e salve a floresta lutando contra os monstros de sujeira da Lixotech."
                 </p>
 
-                <div class="concept-boxes"
-                    style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
-                    <div
-                        style="background: rgba(0,0,0,0.05); padding: 30px; border-radius: 12px; width: 300px; border-bottom: 3px solid #5db8d4;">
-                        <h3 style="color:#111; margin-bottom:10px;">Gênero</h3>
-                        <p style="color:#444; font-size: 1.1rem; font-weight: 600;">Plataforma 2D de Ação</p>
+                <div class="concept-boxes">
+                    <div class="concept-card" style="border-bottom: 3px solid #5db8d4;">
+                        <h3>Gênero</h3>
+                        <p>Plataforma 2D de Ação</p>
                     </div>
-                    <div
-                        style="background: rgba(0,0,0,0.05); padding: 30px; border-radius: 12px; width: 300px; border-bottom: 3px solid #8e6db5;">
-                        <h3 style="color:#111; margin-bottom:10px;">Tema Central</h3>
-                        <p style="color:#444; font-size: 1.1rem; font-weight: 600;">"Guardiã das Águas" (Preservação)
-                        </p>
+                    <div class="concept-card" style="border-bottom: 3px solid #8e6db5;">
+                        <h3>Tema Central</h3>
+                        <p>"Guardiã das Águas" (Preservação)</p>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -135,23 +136,21 @@
                 <h2 class="section-title text-center reveal-up">Público-Alvo</h2>
                 <div class="mechanics-grid" style="grid-template-columns: repeat(3, 1fr);">
                     <div class="mechanic-card reveal-up delay-1">
-                        <div class="icon">🎮</div>
                         <h3>Quem Vai Jogar?</h3>
                         <p>Crianças, pré-adolescentes e jovens interessados em jogos side-scrollers dinâmicos.</p>
                     </div>
                     <div class="mechanic-card highlight reveal-up delay-2">
-                        <div class="icon">🎒</div>
                         <h3>Perfil (8 a 15 anos)</h3>
                         <p>Geração Z e Alpha, nativos digitais, além de Educadores buscando ferramentas de gamificação.
                         </p>
                     </div>
                     <div class="mechanic-card reveal-up delay-3">
-                        <div class="icon">🏫</div>
                         <h3>Onde Encontrar?</h3>
                         <p>Escolas parceiras, eventos de educação gamificada e plataformas gratuitas (Itch.io e Web).
                         </p>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -184,25 +183,26 @@
         <section class="content-section light-section" id="gameplay">
             <div class="container">
                 <h3 class="section-subtitle text-center">Visual e Interface</h3>
-                <h2 class="section-title text-center text-dark reveal-up">Gameplay em Ação</h2>
+                <h2 class="section-title text-center reveal-up">Gameplay em Ação</h2>
                 <div class="custom-gallery-grid" style="margin-top: 50px;">
                     <div class="gallery-item hover-zoom reveal-up delay-1">
-                        <img src="imagem 1.png" alt="Cenário de Gameplay">
+                        <img src="assets/images/gallery-1.png" alt="Cenário de Gameplay">
                         <div class="gallery-caption">O Mundo de Yaceu</div>
                     </div>
                     <div class="gallery-item hover-zoom reveal-up delay-2">
-                        <img src="imagem2.png" alt="Interface HUD">
+                        <img src="assets/images/gallery-2.png" alt="Interface HUD">
                         <div class="gallery-caption">Interface do Jogador (HUD)</div>
                     </div>
                     <div class="gallery-item hover-zoom reveal-up delay-3">
-                        <img src="imagem 3.png" alt="Gameplay Action">
+                        <img src="assets/images/gallery-3.png" alt="Gameplay Action">
                         <div class="gallery-caption">Mecânicas de Ação</div>
                     </div>
                     <div class="gallery-item hover-zoom reveal-up delay-4">
-                        <img src="imagem4.png" alt="Ambiente Corrompido">
+                        <img src="assets/images/gallery-4.png" alt="Ambiente Corrompido">
                         <div class="gallery-caption">Desafios Ambientais</div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -298,12 +298,14 @@
                     mecânicas de movimento e ajudar Lara a limpar a floresta!
                 </p>
                 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <a href="#" class="btn-instagram" style="background: var(--brand-gold); color: #000;">🕹️ Link para
+                    <a href="#" class="btn-instagram" style="background: var(--brand-gold); color: #000;">Link para
                         Jogar (WebGL)</a>
                     <a href="https://www.youtube.com/watch?v=YAmCkvNIiYg" target="_blank" class="btn-instagram"
-                        style="background: rgba(255,255,255,0.1); border: 2px solid white;">📺 Vídeo Pitch (Guardiões
+                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.2);">Vídeo Pitch
+                        (Guardiões
                         das Águas)</a>
                 </div>
+
             </div>
         </section>
 
